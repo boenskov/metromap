@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Metro Map Example</title>
+</head>
+<body>
+<script src="metro.js"></script>
+
+<div style="border: 1px solid red;" id="metromap"></div>
+<div style="border: 1px solid red;" id="listing"></div>
+
+<script>
+var m=new metromap();
+m.map_id="metromap";
+m.listing="listing";
+m.init();
+</script>
+
+<style>
+#metromap { position: relative; }
+.metromap_img { }
+.metromap_marker+label { margin-top: -6px;position: absolute;
+	width: 10px; height: 10px; cursor: pointer;color: red;}
+.metromap_marker:checked + label {border-bottom: 1px solid green;}
+.metromap_marker + label:hover {border-bottom: 1px solid lime;}
+.metromap_marker + label div { width: 3px; height: 3px; border-radius: 6px;
+	background: transparent; border-width: 3px; border-style: solid;
+	border-color: transparent; margin: 2px 1px;}
+.metromap_marker:hover div { background-color: lime !important; border-color: lime !important ; box-shadow: 0 0 0px 2px #FFFFFF }
+.metromap_marker:checked + label div { background-color: white !important;
+	border-color: green !important; box-shadow: 0 0 0px 1px #FFFFFF }
+.metromap_marker+label.metromap_left div { float: left;}
+.metromap_marker+label.metromap_right div { float: right;}
+.metromap_marker { display: none; }
+.metromap_group { width: 90px; height: 15px;position: absolute; cursor: pointer;}
+.metromap_label {  display: block; font-size: 12px; cursor: pointer; }
+.metromap_label:hover { color: #333;}
+.metromap_label span { color: red;}
+</style>
+
+some text some text some text some text some text some text some text some text
+
+</body></html>
